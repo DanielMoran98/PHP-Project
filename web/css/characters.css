@@ -1,0 +1,49 @@
+.char1 h1,.char2 h1{
+    color: #68663B;
+}
+
+.char1{
+
+    height:370px;
+    padding:10px;
+}
+.char1 ul{
+    list-style-type:none;
+}
+.char1 li{
+    float:left;
+}
+.char1 .text{
+
+    width:60%;
+}
+.char1 .img{
+    padding-right:0;
+    border:3px solid black;
+}
+
+/**
+**
+ */
+
+.char2{
+
+    height:370px;
+    padding-right:0;
+    padding:10px;
+}
+.char2 ul{
+    list-style-type:none;
+}
+.char2 li{
+    float:left;
+}
+.char2 .text{
+    padding-left:20px;
+    width:60%;
+}
+.char2 .img{
+    padding:0;
+    margin:0;
+    border:3px solid black;
+}

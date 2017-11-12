@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>
-        'Index Page'
+        <?php $pageTitle?>
     </title>
     <style>@import 'web/css/style.css';</style>
 </head>
@@ -33,7 +33,11 @@
             <li class="navright">Store</li>
         </ul>
     </nav>
-
+    <div id="main">
+        <?php
+            include __DIR__ . '\views\characters.php';
+        ?>
+    </div>
 </div>
     <footer>
         <p>
