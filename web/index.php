@@ -4,10 +4,11 @@
     <title>
         <?php $pageTitle?>
     </title>
-    <style>@import 'web/css/style.css';</style>
+    <style>@import '/css/style.css';</style>
 </head>
 
 <body>
+
 <div id="loginbar">
     Username:
     <input type="text" name="username">
@@ -21,14 +22,14 @@
 
 
     <header>
-        <img src = 'web/images/banner.jpg'>
+        <img src = '/images/banner.jpg'>
     </header>
 
 
     <nav>
         <ul>
             <li class="navleft">Home</li>
-            <li>Characters</li>
+            <li><a href="/index.php">Characters</a></li>
             <li>Gallery</li>
             <li class="navright">Store</li>
         </ul>

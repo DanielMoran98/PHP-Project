@@ -1,6 +1,6 @@
 <head>
     <style>
-        @import 'web/css/characters.css';
+        @import '/css/characters.css';
     </style>
 
 </head>
@@ -12,14 +12,14 @@
             </p>
         </li>
         <li class="img">
-            <img src="web/images/shylock.png">
+            <img src="/images/shylock.png">
         </li>
     </ul>
 </div>
 <div class="char2">
     <ul>
         <li class="img">
-            <img src="web/images/antonio.png">
+            <img src="/images/antonio.png">
         </li>
         <li class="text">
             <h1>Antonio</h1>
