@@ -33,7 +33,11 @@
             <li class="navright">Store</li>
         </ul>
     </nav>
-
+    <div id="main">
+        <?php
+            include __DIR__ . '\views\characters.html';
+        ?>
+    </div>
 </div>
     <footer>
         <p>

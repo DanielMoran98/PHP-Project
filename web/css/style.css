@@ -27,7 +27,7 @@ body{
 
 nav{
     border-radius:5px;
-
+    font-size:20px;
 }
 .navleft{
     border-top-left-radius: 20px;
@@ -48,7 +48,7 @@ nav ul{
 }
 nav ul li{
     color:#eeeee4;
-    background-color:#7B7A63;
+    background-color: #7b7a63;
     float:left;
     padding-left:8%;
     padding-right:8%;
@@ -60,15 +60,21 @@ nav ul li{
 
 }
 
+#main{
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
 footer{
     display:block;
     clear:both;
     overflow: hidden;
-    position:absolute;
+    position:relative;
     bottom:0;
     background-color:#7B7A63;
     padding-bottom:50px;
     padding-left:40px;
     width:100%;
     color:#eeeee4;
+    font-size:20px;
 }
