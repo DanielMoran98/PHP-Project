@@ -1,5 +1,10 @@
 .char1 h1,.char2 h1{
-    color: #68663B;
+    border: 1px black solid;
+    background-color:#68663B;
+    color: #eeeee4;
+    width:20%;
+    border-radius:30px;
+    padding-left:20px;
 }
 
 .char1{

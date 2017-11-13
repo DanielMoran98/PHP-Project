@@ -28,15 +28,16 @@
 
     <nav>
         <ul>
-            <li class="navleft">Home</li>
-            <li><a href="/index.php">Characters</a></li>
-            <li>Gallery</li>
-            <li class="navright">Store</li>
+            <li class="navleft"><a href="index.php"> Home</a></li>
+            <li><a href="/index.php?action=characters">Characters</a></li>
+            <li><a href="/index.php?action=gallery">Gallery</a></li>
+            <li class="navright"><a href="/index.php?action=gallery">Store</a></li>
         </ul>
     </nav>
     <div id="main">
         <?php
-            include __DIR__ . '\views\characters.php';
+            if ($_GET['action']=='home') {include __DIR__ . '\views\index.php';}
+            if($_GET['action']=='characters') {include __DIR__ . '\views\characters.php';}
         ?>
     </div>
 </div>
