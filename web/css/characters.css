@@ -1,5 +1,17 @@
+.char1 img, .char2 img{
+    border:3px solid black;
+    border-radius:5px;
+}
+
 .char1 h1,.char2 h1{
-    color: #68663B;
+    border: 1px black solid;
+    background-color:#68663B;
+    color: #eeeee4;
+    display:inline-block;
+    border-radius:30px;
+
+    padding-left:20px;
+    padding-right:20px;
 }
 
 .char1{
@@ -19,9 +31,12 @@
 }
 .char1 .img{
     padding-right:0;
-    border:3px solid black;
+
 }
 
+.char1 p, .char2 p{
+    font-size:22px;
+}
 /**
 **
  */
@@ -45,5 +60,5 @@
 .char2 .img{
     padding:0;
     margin:0;
-    border:3px solid black;
+
 }

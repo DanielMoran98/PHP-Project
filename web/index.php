@@ -4,10 +4,11 @@
     <title>
         <?php $pageTitle?>
     </title>
-    <style>@import 'web/css/style.css';</style>
+    <style>@import '/css/style.css';</style>
 </head>
 
 <body>
+
 <div id="loginbar">
     Username:
     <input type="text" name="username">
@@ -21,21 +22,26 @@
 
 
     <header>
-        <img src = 'web/images/banner.jpg'>
+        <a href="index.php">
+            <img src = '/images/banner.jpg'>
+        </a>
     </header>
 
 
     <nav>
         <ul>
-            <li class="navleft">Home</li>
-            <li>Characters</li>
-            <li>Gallery</li>
-            <li class="navright">Store</li>
+            <li class="navleft"><a href="index.php"> Home</a></li>
+            <li><a href="/index.php?action=characters">Characters</a></li>
+            <li><a href="/index.php?action=gallery">Gallery</a></li>
+            <li class="navright"><a href="/index.php?action=gallery">Store</a></li>
         </ul>
     </nav>
     <div id="main">
         <?php
-            include __DIR__ . '\views\characters.php';
+
+            if($_GET['action']=='characters') {include __DIR__ . '\views\characters.php';}
+            if ($_GET['action']=='home') {include __DIR__ . 'index.php';}
+            if ($_GET['action']=='gallery') {include __DIR__ . '\views\gallery.php';}
         ?>
     </div>
 </div>
