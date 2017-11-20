@@ -22,7 +22,9 @@
 
 
     <header>
-        <img src = '/images/banner.jpg'>
+        <a href="index.php">
+            <img src = '/images/banner.jpg'>
+        </a>
     </header>
 
 
@@ -36,8 +38,10 @@
     </nav>
     <div id="main">
         <?php
-            if ($_GET['action']=='home') {include __DIR__ . '\views\index.php';}
+
             if($_GET['action']=='characters') {include __DIR__ . '\views\characters.php';}
+            if ($_GET['action']=='home') {include __DIR__ . 'index.php';}
+            if ($_GET['action']=='gallery') {include __DIR__ . '\views\gallery.php';}
         ?>
     </div>
 </div>

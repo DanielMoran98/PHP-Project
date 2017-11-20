@@ -1,4 +1,10 @@
+/*
 
+    Colors:
+    Background: #eeeee4;
+    Green 1: #7B7A63;
+    Green 2: #68663B;
+ */
 
 #container{
     left:20%;
@@ -8,11 +14,13 @@
 
 body{
     background-color: #eeeee4;
+    height:200px;
     font-family: Tahoma;
 }
 
 #loginbar{
-    position:absolute;
+    z-index:2;
+    position:fixed;
     top:0;
     right:0;
     float:right;
