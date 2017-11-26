@@ -1,0 +1,18 @@
+body{
+    margin:0;
+}
+#homeContent{
+    width:70%;
+}
+#homeContent h1{
+    border: 1px black solid;
+    background-color:#68663B;
+    color: #eeeee4;
+    display:inline-block;
+    border-radius:30px;
+    padding-left:20px;
+    padding-right:20px;
+}
+#homeContent p{
+    font-size:22px;
+}
