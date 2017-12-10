@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <meta http-equiv="refresh" content="2;URL='..\index.php'" />
+    <meta http-equiv="refresh" content="3;URL='..\index.php'" />
 <style>
 body{
     background-color:#eeeee4;

@@ -9,9 +9,31 @@
  * TODO: Upload
  *
 */
+
 ?>
 
-<?php $pageTitle = 'Home'?>
+<?php
+$pageTitle = 'Home';
+require_once __DIR__ . '/../vendor/autoload.php';
+use Itb\WebApplication;
+$app = new WebApplication();
+
+session_start();
+
+
+//$_SESSION['loggedIn'] = false;
+
+$app->tryLogin();
+//if(isset($_GET['username']) && $_GET['username'] == 'user' && isset($_GET['username']) && $_GET['password'] == 'pass')
+//{
+//    $_SESSION['loggedIn'] = true;
+//}
+//if(isset($_GET['username']))
+//{
+
+//}
+?>
+
 
 <!DOCTYPE html>
 
@@ -24,17 +46,33 @@
 </head>
 
 <body>
+<?php if($_SESSION['loggedIn'] == false){echo "false";}
+        if($_SESSION['loggedIn'] == true){echo "true";}
+      ?>
+<div id="loginbar" >
 
-<div id="loginbar">
-    <form>
+    <form method="post" <?php if($_SESSION['loggedIn'] == true){echo 'style="display:none";';} ?>>
     Username:
         <input type="text" name="username">
         Password:
         <input type="password" name="password">
         <input type="submit" value="Login" onclick="">
-
     </form>
+
+
+    <form method="post" <?php if($_SESSION['loggedIn'] == false){echo 'style="display:none";';} ?>>
+        Logged in as
+        <?php
+            $user = 'user'  ;
+        echo"$user"; ?>
+        <input type="hidden" name="logout" value="true">
+        <input type="submit" value="Logout" onclick="<?php $app->logout(); ?>">
+    </form>
+
 </div>
+
+
+
 <br/>
 <br/>
 <div id="container">
@@ -58,11 +96,14 @@
     <div id="main">
         <?php
 
-            $action = filter_input(INPUT_GET, 'action');
-            if($action == null){require_once __DIR__ . '\views\home.php';}
-            if($action == 'characters'){include __DIR__ . '\views\characters.php';}
-            if($action == 'home'){include __DIR__ . 'index.php';}
-            if($action == 'gallery'){include __DIR__ . '\views\gallery.php';}
+
+            $app->run();
+
+            //$action = filter_input(INPUT_GET, 'action');
+            //if($action == null){require_once __DIR__ . '\views\home.php';}
+            //if($action == 'characters'){include __DIR__ . '\views\characters.php';}
+            //if($action == 'home'){include __DIR__ . 'index.php';}
+            //if($action == 'gallery'){include __DIR__ . '\views\gallery.php';}
 
 
             //if($_GET['action']=='characters') {include __DIR__ . '\views\characters.php';}

@@ -1,10 +1,19 @@
-<?php $pageTitle = 'Characters'?>
+<?php
+
+if($_SESSION['loggedIn'] == false)
+{
+    header('Location: views/accessDenied.php');
+}
+$pageTitle = 'Characters';
+?>
 <head>
     <style>
         @import '/css/characters.css';
     </style>
 
 </head>
+
+
 <div class="char1">
     <ul>
         <li class="text">
