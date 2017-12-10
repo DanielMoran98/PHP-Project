@@ -1,6 +1,20 @@
+<?php
+/*
+ *
+ * TODO: Several Non Trivial Features working
+ * TODO: Form data received and confirmed back
+ * TODO: User and Pass login
+ * TODO: Good directory Structure
+ * TODO: 2 or more classes
+ * TODO: Upload
+ *
+*/
+?>
+
 <?php $pageTitle = 'Home'?>
 
 <!DOCTYPE html>
+
 <html>
 <head>
     <title>
@@ -38,7 +52,7 @@
             <li class="navleft"><a href="index.php"> Home</a></li>
             <li><a href="/index.php?action=characters">Characters</a></li>
             <li><a href="/index.php?action=gallery">Gallery</a></li>
-            <li class="navright"><a href="/index.php?action=gallery">Store</a></li>
+            <li class="navright"><a href="/index.php?action=store">Store</a></li>
         </ul>
     </nav>
     <div id="main">
