@@ -39,6 +39,7 @@ $app->tryLogin();
 
 <html>
 <head>
+    <link rel="icon" href="images\favicon.ico">
     <title>
         <?php echo $pageTitle?>
     </title>
@@ -46,9 +47,7 @@ $app->tryLogin();
 </head>
 
 <body>
-<?php if($_SESSION['loggedIn'] == false){echo "false";}
-        if($_SESSION['loggedIn'] == true){echo "true";}
-      ?>
+
 <div id="loginbar" >
 
     <form method="post" <?php if($_SESSION['loggedIn'] == true){echo 'style="display:none";';} ?>>
@@ -57,17 +56,11 @@ $app->tryLogin();
         Password:
         <input type="password" name="password">
         <input type="submit" value="Login" onclick="">
-    </form>
+    </form >
 
-
-    <form method="post" <?php if($_SESSION['loggedIn'] == false){echo 'style="display:none";';} ?>>
-        Logged in as
-        <?php
-            $user = 'user'  ;
-        echo"$user"; ?>
-        <input type="hidden" name="logout" value="true">
-        <input type="submit" value="Logout" onclick="<?php $app->logout(); ?>">
-    </form>
+        <span <?php if($_SESSION['loggedIn'] == false){echo 'style="display:none";';} ?>>
+              Logged in as '<?php if(isset($_SESSION['username'])){echo $_SESSION['username'];} ?>' <a href = 'views/logout.php' style="font-weight:bold; color:white; text-decoration: underline">Logout</a>
+        </span>
 
 </div>
 
@@ -87,10 +80,10 @@ $app->tryLogin();
 
     <nav>
         <ul>
-            <li class="navleft"><a href="index.php"> Home</a></li>
-            <li><a href="/index.php?action=characters">Characters</a></li>
-            <li><a href="/index.php?action=gallery">Gallery</a></li>
-            <li class="navright"><a href="/index.php?action=store">Store</a></li>
+            <li class="<?php if(!isset($_GET['action']) || $_GET['action'] == 'home'){ echo 'activePage';}  ?> navleft"><a href="index.php"> Home</a></li>
+            <li <?php if(isset($_GET['action']) && $_GET['action'] == 'characters'){ echo 'class="activePage"';}  ?>><a href="/index.php?action=characters">Characters</a></li>
+            <li <?php if(isset($_GET['action']) && $_GET['action'] == 'gallery'){ echo 'class="activePage"';}  ?>><a href="/index.php?action=gallery">Gallery</a></li>
+            <li class="<?php if(isset($_GET['action']) && $_GET['action'] == 'store'){ echo 'activePage';}  ?> navright"><a href="/index.php?action=store">Store</a></li>
         </ul>
     </nav>
     <div id="main">

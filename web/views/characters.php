@@ -1,9 +1,6 @@
 <?php
 
-if($_SESSION['loggedIn'] == false)
-{
-    header('Location: views/accessDenied.php');
-}
+
 $pageTitle = 'Characters';
 ?>
 <head>

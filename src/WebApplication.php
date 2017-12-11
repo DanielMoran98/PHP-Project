@@ -64,9 +64,26 @@ class WebApplication
             case 'user':
                 if($password == 'pass')
                 {
+                    $_SESSION['username'] = 'user' ;
                     $this->mainController->login();
                 }
                 break;
+
+            case 'staff':
+                if($password == 'pass')
+                {
+                    $_SESSION['username'] = 'staff' ;
+                    $this->mainController->login();
+                }
+                break;
+            case 'admin':
+                if($password == 'pass')
+                {
+                    $_SESSION['username'] = 'admin' ;
+                    $this->mainController->login();
+                }
+                break;
+
 
 
         }

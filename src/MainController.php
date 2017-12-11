@@ -27,10 +27,13 @@ class MainController
     public function login()
     {
         $_SESSION['loggedIn'] = true;
+        header('Location: views/success.php');
+
     }
 
     public function logout()
     {
         $_SESSION['loggedIn'] = false;
+        header('Location: views/success.php');
     }
 }

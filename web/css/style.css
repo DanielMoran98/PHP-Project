@@ -46,6 +46,9 @@ nav{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+.activePage{
+    background-color:#68663B;
+}
 nav ul{
     list-style-type:none;
     width:100%;
@@ -91,3 +94,4 @@ footer{
     color:#eeeee4;
     font-size:20px;
 }
+
