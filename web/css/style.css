@@ -16,6 +16,7 @@ body{
     background-color: #eeeee4;
     height:200px;
     font-family: Tahoma;
+    margin:0;
 }
 
 #loginbar{
@@ -44,6 +45,9 @@ nav{
 .navright{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+.activePage{
+    background-color:#68663B;
 }
 nav ul{
     list-style-type:none;
@@ -90,3 +94,4 @@ footer{
     color:#eeeee4;
     font-size:20px;
 }
+

@@ -1,9 +1,16 @@
+<?php
+
+
+$pageTitle = 'Characters';
+?>
 <head>
     <style>
         @import '/css/characters.css';
     </style>
 
 </head>
+
+
 <div class="char1">
     <ul>
         <li class="text">

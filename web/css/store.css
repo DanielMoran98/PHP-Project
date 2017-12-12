@@ -1,0 +1,19 @@
+table{
+
+    text-align:center;
+}
+table, td, th
+{
+    border: solid #7B7A63 1px;
+    padding:4px;
+    padding-left:40px;
+    padding-right:40px;
+    margin:4px;
+    border-collapse: collapse;
+    font-size:110%;
+}
+th
+{
+    color:#EEEEE4;
+    background-color:#68663B;
+}

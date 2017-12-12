@@ -1,8 +1,8 @@
-<?php session_start();?>
+
 <html>
 <head>
-    <meta http-equiv="refresh" content="2;URL='..\index.php'" />
-<style>
+    <meta http-equiv="refresh" content="3;URL='..\index.php'" />
+    <style>
         body{
             background-color:#eeeee4;
             z-index: 3;
@@ -38,15 +38,15 @@
             100% { transform: rotate(360deg); }
         }
 
-</style>
+    </style>
 </head>
 <body>
 <br><br><br><br>
 
-    <h1>
-        You have been successfully logged in as <span style="color:darkred"> <?php echo $_SESSION['username'] ?></span>! <br> You will now be redirected back to the website.
-    </h1>
-    <div class="loader"></div>
+<h1>
+    <span style="color:darkred;">Access Denied!</span> You must login to view this webpage. <br> You will now be redirected back to the website.
+</h1>
+<div class="loader"></div>
 
 <br><br><br><br>
 </body>

@@ -1,8 +1,12 @@
-<?php session_start();?>
+<?php
+session_start();
+
+$_SESSION['loggedIn'] = false;
+?>
 <html>
 <head>
     <meta http-equiv="refresh" content="2;URL='..\index.php'" />
-<style>
+    <style>
         body{
             background-color:#eeeee4;
             z-index: 3;
@@ -38,15 +42,15 @@
             100% { transform: rotate(360deg); }
         }
 
-</style>
+    </style>
 </head>
 <body>
 <br><br><br><br>
 
-    <h1>
-        You have been successfully logged in as <span style="color:darkred"> <?php echo $_SESSION['username'] ?></span>! <br> You will now be redirected back to the website.
-    </h1>
-    <div class="loader"></div>
+<h1>
+    You have been successfully logged out! <br> You will now be redirected back to the website.
+</h1>
+<div class="loader"></div>
 
 <br><br><br><br>
 </body>
