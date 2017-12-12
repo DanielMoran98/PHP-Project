@@ -9,8 +9,9 @@ if($_SESSION['loggedIn'] == false)
 </head>
 <table>
     <tr>
-        <th>ID</th> <th>Type</th> <th>Name</th> <th>Description</th> <th>Price</th>
+        <th>Id</th> <th>Type</th> <th>Name</th> <th>Description</th> <th>Price</th>
     </tr>
+
     <tr>
         <td>1</td>  <td>Cup</td> <td>Black cup</td> <td>A black cup with an image of shakespeare on it</td> <td>4.99</td>
     </tr>

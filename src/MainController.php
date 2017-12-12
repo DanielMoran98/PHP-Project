@@ -4,6 +4,12 @@ namespace Itb;
 
 class MainController
 {
+
+    public function __construct()
+    {
+
+    }
+
     public function home()
     {
         require_once __DIR__ . '\..\web\views\home.php';
