@@ -6,8 +6,8 @@
  * DONE: User and Pass login
  * DONE: Good directory Structure
  * DONE: 2 or more classes
- * TODO: Finish Sources
- * TODO: 2 or more tables
+ * DONE: Finish Sources
+ * DONE: 2 or more tables
  * TODO: Upload
  *
 */
@@ -90,11 +90,7 @@ $app->tryLogin();
     </nav>
     <div id="main">
         <?php
-
-
             $app->run();
-
-
         ?>
     </div>
 </div>

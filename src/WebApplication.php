@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Dano
- * Date: 10/12/2017
- * Time: 15:40
- */
+
 
 namespace Itb;
 
@@ -68,6 +63,8 @@ class WebApplication
                     $_SESSION['access'] = 1;
                     $_SESSION['username'] = 'user' ;
                     $this->mainController->login();
+                }else{
+                    header('Location: views/fail.php');
                 }
                 break;
 
@@ -77,6 +74,8 @@ class WebApplication
                     $_SESSION['access'] = 2;
                     $_SESSION['username'] = 'staff' ;
                     $this->mainController->login();
+                }else{
+                    header('Location: views/fail.php');
                 }
                 break;
             case 'admin':
@@ -85,7 +84,12 @@ class WebApplication
                     $_SESSION['access'] = 3;
                     $_SESSION['username'] = 'admin' ;
                     $this->mainController->login();
+                }else{
+                    header('Location: views/fail.php');
                 }
+
+
+
                 break;
 
 

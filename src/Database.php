@@ -13,7 +13,7 @@ class Database
     public function createTableProducts()
     {
 
-        $sql = 'CREATE TABLE IF NOT EXISTS products (
+        $sql = 'CREATE TABLE  IF NOT EXISTS products (
                 id INTEGER PRIMARY KEY,
                 description TEXT,
                 price TEXT)';
@@ -41,7 +41,6 @@ class Database
 
     public function dropTableProducts()
     {
-    // Drop table messages from file db
         $this->pdo->exec('DROP TABLE products');
     }
 }

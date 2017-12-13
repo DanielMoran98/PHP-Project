@@ -3,10 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/PHP Project.iml" filepath="$PROJECT_DIR$/.idea/PHP Project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../../../database ex/db01_withSetup (1)/db01/.idea/db01.iml" filepath="$PROJECT_DIR$/../../../../database ex/db01_withSetup (1)/db01/.idea/db01.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../../../database ex/db01_withSetup/.idea/db01_withSetup.iml" filepath="$PROJECT_DIR$/../../../../database ex/db01_withSetup/.idea/db01_withSetup.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../../../database ex/db01_withSetup (1)/productsAdmin/.idea/productsAdmin.iml" filepath="$PROJECT_DIR$/../../../../database ex/db01_withSetup (1)/productsAdmin/.idea/productsAdmin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../../../SOLUTIONS2/.idea/productsAdmin - lecture-demo.iml" filepath="$PROJECT_DIR$/../../../../SOLUTIONS2/.idea/productsAdmin - lecture-demo.iml" />
     </modules>
   </component>
 </project>
