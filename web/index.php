@@ -19,7 +19,9 @@
 
 $pageTitle = 'Home';
 require_once __DIR__ . '/../vendor/autoload.php';
+
 use Itb\WebApplication;
+
 $app = new WebApplication();
 
 session_start();
@@ -92,16 +94,7 @@ $app->tryLogin();
 
             $app->run();
 
-            //$action = filter_input(INPUT_GET, 'action');
-            //if($action == null){require_once __DIR__ . '\views\home.php';}
-            //if($action == 'characters'){include __DIR__ . '\views\characters.php';}
-            //if($action == 'home'){include __DIR__ . 'index.php';}
-            //if($action == 'gallery'){include __DIR__ . '\views\gallery.php';}
 
-
-            //if($_GET['action']=='characters') {include __DIR__ . '\views\characters.php';}
-            //if ($_GET['action']=='home') {include __DIR__ . 'index.php';}
-            //if ($_GET['action']=='gallery') {include __DIR__ . '\views\gallery.php';}
         ?>
     </div>
 </div>

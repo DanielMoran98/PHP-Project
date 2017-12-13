@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../src/Product.php';
+
 class Database
 {
     private $pdo;
@@ -21,14 +22,11 @@ class Database
 
     public function insertProduct($description, $price)
     {
-    // Prepare INSERT statement to SQLite3 file db
         $sql = 'INSERT INTO products (description, price )
                 VALUES (:description, :price)';
         $stmt = $this->pdo->prepare($sql);
-    // Bind parameters to statement variables
         $stmt->bindParam(':description', $description);
         $stmt->bindParam(':price', $price);
-    // Execute statement
         $stmt->execute();
     }
 
