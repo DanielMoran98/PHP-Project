@@ -23,19 +23,15 @@ use Itb\WebApplication;
 $app = new WebApplication();
 
 session_start();
-
+if(isset($_SESSION['loggedIn']) == false )
+{
+    $_SESSION['loggedIn'] = false;
+}
 
 //$_SESSION['loggedIn'] = false;
 
 $app->tryLogin();
-//if(isset($_GET['username']) && $_GET['username'] == 'user' && isset($_GET['username']) && $_GET['password'] == 'pass')
-//{
-//    $_SESSION['loggedIn'] = true;
-//}
-//if(isset($_GET['username']))
-//{
 
-//}
 ?>
 
 
@@ -45,7 +41,7 @@ $app->tryLogin();
 <head>
     <link rel="icon" href="images\favicon.ico">
     <title>
-        <?php echo $pageTitle?>
+        Merchant of Venice
     </title>
     <style>@import '/css/style.css';</style>
 </head>

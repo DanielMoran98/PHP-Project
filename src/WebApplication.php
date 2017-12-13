@@ -65,6 +65,7 @@ class WebApplication
             case 'user':
                 if($password == 'pass')
                 {
+                    $_SESSION['access'] = 1;
                     $_SESSION['username'] = 'user' ;
                     $this->mainController->login();
                 }
@@ -73,6 +74,7 @@ class WebApplication
             case 'staff':
                 if($password == 'pass')
                 {
+                    $_SESSION['access'] = 2;
                     $_SESSION['username'] = 'staff' ;
                     $this->mainController->login();
                 }
@@ -80,6 +82,7 @@ class WebApplication
             case 'admin':
                 if($password == 'pass')
                 {
+                    $_SESSION['access'] = 3;
                     $_SESSION['username'] = 'admin' ;
                     $this->mainController->login();
                 }
@@ -91,6 +94,7 @@ class WebApplication
     }
     public function logout()
     {
+        $_SESSION['access'] = 0;
         $_SESSION['loggedIn'] = false;
     }
 }

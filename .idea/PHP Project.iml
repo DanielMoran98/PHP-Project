@@ -16,7 +16,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="db01_withSetup" />
-    <orderEntry type="module" module-name="db01" />
     <orderEntry type="module" module-name="productsAdmin" />
+    <orderEntry type="module" module-name="db01" />
   </component>
 </module>

@@ -17,6 +17,7 @@ class MainController
 
     public function characters()
     {
+
         require_once __DIR__ . '\..\web\views\characters.php';
     }
 
@@ -40,6 +41,8 @@ class MainController
     public function logout()
     {
         $_SESSION['loggedIn'] = false;
+        $_SESSION['access'] = 0;
+        session_destroy();
         header('Location: views/success.php');
     }
 }

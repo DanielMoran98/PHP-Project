@@ -7,7 +7,7 @@ $pageTitle = 'Characters';
     <style>
         @import '/css/characters.css';
     </style>
-
+    <title> <?php echo "$pageTitle" ?></title>
 </head>
 
 
