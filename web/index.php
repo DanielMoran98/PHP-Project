@@ -1,37 +1,39 @@
 <?php
 /*
  *
- * TODO: Several Non Trivial Features working
- * TODO: Form data received and confirmed back
- * TODO: User and Pass login
- * TODO: Good directory Structure
- * TODO: 2 or more classes
+ * DONE: Several Non Trivial Features working
+ * DONE: Form data received and confirmed back
+ * DONE: User and Pass login
+ * DONE: Good directory Structure
+ * DONE: 2 or more classes
+ * DONE: Finish Sources
+ * DONE: 2 or more tables
  * TODO: Upload
  *
 */
 
+
 ?>
 
 <?php
+
 $pageTitle = 'Home';
 require_once __DIR__ . '/../vendor/autoload.php';
+
 use Itb\WebApplication;
+
 $app = new WebApplication();
 
 session_start();
-
+if(isset($_SESSION['loggedIn']) == false )
+{
+    $_SESSION['loggedIn'] = false;
+}
 
 //$_SESSION['loggedIn'] = false;
 
 $app->tryLogin();
-//if(isset($_GET['username']) && $_GET['username'] == 'user' && isset($_GET['username']) && $_GET['password'] == 'pass')
-//{
-//    $_SESSION['loggedIn'] = true;
-//}
-//if(isset($_GET['username']))
-//{
 
-//}
 ?>
 
 
@@ -41,7 +43,7 @@ $app->tryLogin();
 <head>
     <link rel="icon" href="images\favicon.ico">
     <title>
-        <?php echo $pageTitle?>
+        Merchant of Venice
     </title>
     <style>@import '/css/style.css';</style>
 </head>
@@ -50,7 +52,7 @@ $app->tryLogin();
 
 <div id="loginbar" >
 
-    <form method="post" <?php if($_SESSION['loggedIn'] == true){echo 'style="display:none";';} ?>>
+    <form method="post" <?php if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){echo 'style="display:none";';} ?>>
     Username:
         <input type="text" name="username">
         Password:
@@ -58,7 +60,7 @@ $app->tryLogin();
         <input type="submit" value="Login" onclick="">
     </form >
 
-        <span <?php if($_SESSION['loggedIn'] == false){echo 'style="display:none";';} ?>>
+        <span <?php if( isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == false){echo 'style="display:none";';} ?>>
               Logged in as '<?php if(isset($_SESSION['username'])){echo $_SESSION['username'];} ?>' <a href = 'views/logout.php' style="font-weight:bold; color:white; text-decoration: underline">Logout</a>
         </span>
 
@@ -88,20 +90,7 @@ $app->tryLogin();
     </nav>
     <div id="main">
         <?php
-
-
             $app->run();
-
-            //$action = filter_input(INPUT_GET, 'action');
-            //if($action == null){require_once __DIR__ . '\views\home.php';}
-            //if($action == 'characters'){include __DIR__ . '\views\characters.php';}
-            //if($action == 'home'){include __DIR__ . 'index.php';}
-            //if($action == 'gallery'){include __DIR__ . '\views\gallery.php';}
-
-
-            //if($_GET['action']=='characters') {include __DIR__ . '\views\characters.php';}
-            //if ($_GET['action']=='home') {include __DIR__ . 'index.php';}
-            //if ($_GET['action']=='gallery') {include __DIR__ . '\views\gallery.php';}
         ?>
     </div>
 </div>

@@ -17,3 +17,17 @@ th
     color:#EEEEE4;
     background-color:#68663B;
 }
+p{
+    font-size:22px;
+}
+
+h1{
+    border: 1px black solid;
+    background-color:#68663B;
+    color: #eeeee4;
+    display:inline-block;
+    border-radius:30px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:3px;
+}

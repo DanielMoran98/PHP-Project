@@ -1,15 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Dano
- * Date: 10/12/2017
- * Time: 15:40
- */
+
 
 namespace Itb;
 
 class WebApplication
 {
+
     private $mainController;
     public function __construct()
     {
@@ -64,24 +60,36 @@ class WebApplication
             case 'user':
                 if($password == 'pass')
                 {
+                    $_SESSION['access'] = 1;
                     $_SESSION['username'] = 'user' ;
                     $this->mainController->login();
+                }else{
+                    header('Location: views/fail.php');
                 }
                 break;
 
             case 'staff':
                 if($password == 'pass')
                 {
+                    $_SESSION['access'] = 2;
                     $_SESSION['username'] = 'staff' ;
                     $this->mainController->login();
+                }else{
+                    header('Location: views/fail.php');
                 }
                 break;
             case 'admin':
                 if($password == 'pass')
                 {
+                    $_SESSION['access'] = 3;
                     $_SESSION['username'] = 'admin' ;
                     $this->mainController->login();
+                }else{
+                    header('Location: views/fail.php');
                 }
+
+
+
                 break;
 
 
@@ -90,6 +98,7 @@ class WebApplication
     }
     public function logout()
     {
+        $_SESSION['access'] = 0;
         $_SESSION['loggedIn'] = false;
     }
 }

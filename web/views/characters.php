@@ -1,8 +1,4 @@
-<?php
 
-
-$pageTitle = 'Characters';
-?>
 <head>
     <style>
         @import '/css/characters.css';
