@@ -1,20 +1,3 @@
-# PHP Project
+# Year 2, Semester 1 Web Development project
 
-**Login Passwords**
-
-Username: 'user'
-
-Password: 'pass'
-
-++++++++++++
-
-Username: 'staff'
-
-Password: 'pass'
-
-++++++++++++++
-
-
-Username: 'admin'
-
-Password: 'pass'
+Using HTML, CSS, JavaScript, PHP and Twig.
