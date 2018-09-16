@@ -2,7 +2,7 @@
 
 
 ## About project
-We were tasked with building a website using PHP as a backend based that was based on a play.
+We were tasked with building a website using PHP as a backend that was based on a play.
 
 ## Technologies used
 -HTML/CSS
