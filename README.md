@@ -25,7 +25,7 @@ We were tasked with building a website using PHP as a backend that was based on 
 
 -Database connection 
 
--SStore product tables are populated from the database
+-Store product tables are populated from the database
 
 
 
